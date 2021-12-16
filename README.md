@@ -22,6 +22,48 @@ or
 Make new test cases in test case file
 
 
+Problem Statment 
+
+find the optimal cache configuration for
+defining the baseline for your research. To set up the baseline, you need to design a cache simulator for
+finding the best overall cache configuration for the given memory traces.
+You are expected to design and implement a cache simulator to compare and study the effectiveness of
+various cache configurations. Your simulator would be provided with the memory access trace from the
+trace file and expected to simulate the cache operations in response to the memory access pattern.
+Subsequently, furnish the statistics to an output file.
+
+Each line in the memory access pattern has three fields namely: memory access type, memory address and
+data corresponding either fetched from the disk or needs to be written into the disk. The first field is
+either l or s, where l is for load and s is for store operation. The second field is a 32-bit memory address
+provided in hexadecimal. You can use the third field for populating the cache data structure.
+Note: We assume that each load or store in the trace accesses data of at most 4 bytes of data and do not
+read data that spans over multiple lines in the cache.
+
+Your cache simulator can be configured with the following design parameters, which would be provided
+as command-line arguments while executing “make run”:
+● number of sets in the cache (a positive power-of-2)
+● number of blocks in each set (a positive power-of-2)
+● number of bytes in each block (a positive power-of-2, at least 4)
+● LFU (least-frequently-used) or LRU (least-recently-used) or FIFO (first in first out) evictions
+With only the statistics of the cache hits and cache misses we will not be able to evaluate our cache
+design. We have assumed that we are using a write allocate scheme and write back scheme for handling
+the data transfer between the cache and the memory. To find the latency required by your designed cache
+simulator, we assume the following latencies:
+1. Load / Store from/to the cache takes 1 processor cycle.
+2. Load / Store from/to the memory takes 100 processor cycles for each 4-byte word.
+We can ignore the other delays associated with the cache as we cannot design a cycle-accurate simulator
+with limited information.
+You must provide a Makefile such that:
+● make clean, remove all object files and executables.
+● make sim, compile and link your program, producing an executable called sim.
+● make run num_sets=<number of sets> num_blocks=<number of blocks in each set>
+size_block=<size of block, at least 4> eviction_policy=<LRU || LFU || FIFO>
+trace_file=<trace_file_location> output_file=<output_file_location>, runs the cache simulator
+with the defined design parameters.
+make run num_sets=256 num_blocks=1024 size_block=32 eviction_policy=LFU
+trace_file=read01.trace output_file=output.txt
+● Your code should compile cleanly with GCC-9 compiler flags: -Wall -Wextra --pedantic.
+
 
 Result 
 
