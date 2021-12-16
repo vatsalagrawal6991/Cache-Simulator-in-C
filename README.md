@@ -2,6 +2,7 @@
 # Made By Vatsal Agrawal
 
 # Cache Simulator
+Note - This programme is not tested for all test cases, thus necessary modification may be needed if some test case fails.
 
 **************************HOW TO MAKE EXECUTABLE AND RUN PROGRAMME******************************
 
