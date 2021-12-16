@@ -1,7 +1,9 @@
 
+# Made By Vatsal Agrawal
 
+# Cache Simulator
 
-You have to follow the below instructions while evaluating submission:
+You have to follow the below instructions while evaluating project:
 
 
 Step-1 : modify the paths in ssl_grade.py.
@@ -23,7 +25,7 @@ Make new test cases in test case file
 
 Result 
 
-1) I have completed my assignments and all test cases are working fine (except one test case (cycle value) which told by sir is wrong) and running python code with full score
+1) all test cases are working fine (except one test case (cycle value) which taken intentionally wrong) and running python code with full score
 2) I have used simple concept of enum for to keep track of policy
 3) for each policy I have a dedeicated block of codes
 4) I have used the fact that a address is made up of tag bits and set bits and block offset in set associative cache
