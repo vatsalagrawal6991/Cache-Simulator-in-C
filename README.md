@@ -3,8 +3,9 @@
 
 # Cache Simulator
 
-You have to follow the below instructions while evaluating project:
+**************************HOW TO MAKE EXECUTABLE AND RUN PROGRAMME******************************
 
+Note make a output folder in outer directory
 
 Step-1 : modify the paths in ssl_grade.py.
 		 give the absolute path of the submissions directory, output directory and the trace directory.
